@@ -2,12 +2,18 @@ export const conversionTable = {
   league: [3, "miles"],
   mile: [1760, "yard"],
   // TODO: introduce "furlong" (as 22 yards; equal to 201.168 meters)
+  furlong: [22, "yards"],
   yard: [3, "foot"],
   foot: [12, "inch"],
   inch: [2.54, "centimeter"],
   centimeter: [0.01, "meter"],
   meter: [1, "meter"],
 };
+
+export function convertToMetersRefactor(value: number, einheit: string) {
+  let convertOrder = ["mile", "furlong", "yard", "foot", "inch", "centimeter", "meter"]
+
+}
 
 export function convertToMeters(value: number, unit: string): number {
   let miles: number,
